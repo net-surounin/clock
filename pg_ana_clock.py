@@ -23,7 +23,7 @@ pygame.init()
 clock = pygame.time.Clock()
 
 ### 画面設定
-surface = pygame.display.set_mode((WIDTH,HEIGHT), pygame.NOFRAME)
+surface = pygame.display.set_mode((WIDTH,HEIGHT), pygame.FULLSCREEN)
 
 ### escキーが押されるまで　無限ループ
 # while True:
@@ -126,9 +126,9 @@ while running:
     clock.tick(60)
 """
     else:
-                continue
+        continue
    ### whileループ終了
-    break
+        break
 ### 終了処理
     screen.fill((0, 0, 0)) # 黒色でクリア
     pygame.display.flip()

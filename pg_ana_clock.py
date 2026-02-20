@@ -25,8 +25,21 @@ clock = pygame.time.Clock()
 ### 画面設定
 surface = pygame.display.set_mode((WIDTH,HEIGHT), pygame.NOFRAME)
 
-### 無限ループ
-while True:
+### escキーが押されるまで　無限ループ
+# while True:
+running = True
+while running:
+    ### イベント処理
+    # ゲームループ
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            break
+            running = False
+    # ESCキーで終了（タイトルバーがないため、終了処理を追加すると便利）
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                break
+                running = False
 
     ### 画面初期化
     surface.fill((0,0,0))
@@ -110,33 +123,27 @@ while True:
     pygame.display.update()
 
     ### フレームレート設定
-    clock.tick(100)
-
-    ### イベント処理
-    # ゲームループ
-running = True
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-        # ESCキーで終了（タイトルバーがないため、終了処理を追加すると便利）
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ESCAPE:
-                running = False
-
+    clock.tick(60)
+"""
+    else:
+                continue
+   ### whileループ終了
+    break
+### 終了処理
     screen.fill((0, 0, 0)) # 黒色でクリア
     pygame.display.flip()
-
+"""
 pygame.quit()
+"""
+for event in pygame.event.get():
+    if event.type == KEYDOWN and event.key == K_ESCAPE:
+        break
+    else:
+        continue
 
-# for event in pygame.event.get():
-#        if event.type == KEYDOWN and event.key == K_ESCAPE:
-#            break
-#    else:
-#        continue
-#
-#    ### whileループ終了
-#    break
+   ### whileループ終了
+    break
 
 ### 終了処理
 pygame.quit()
+"""

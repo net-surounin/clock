@@ -14,7 +14,7 @@ NEEDLE_S = 240      # 秒針
 MARK_H   = 195      # 時字
 MARK_M   = 275      # 分字
 BASE_AGL = 90       # 基準角度
-CENTER   = int(WIDTH/2),int(HEIGHT/2)
+CENTER   = int(WIDTH/2), int(HEIGHT/2)
 
 ### モジュール初期化
 pygame.init()

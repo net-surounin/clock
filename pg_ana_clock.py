@@ -1,4 +1,5 @@
 ### インポート
+import os
 import math
 import datetime
 import pygame
@@ -15,6 +16,9 @@ MARK_H   = 195      # 時字
 MARK_M   = 275      # 分字
 BASE_AGL = 90       # 基準角度
 CENTER   = int(WIDTH/2), int(HEIGHT/2)
+
+os.environ["DISPLAY"] = ":0.0" # メインディスプレイ
+
 
 ### モジュール初期化
 pygame.init()

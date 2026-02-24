@@ -7,7 +7,7 @@ from pygame.locals import *
 ### 定数
 WIDTH  = 1024   # 幅
 HEIGHT =  600   # 高
-FONTS  = "Ariel" # フォントフェース
+FONTS  = "Monospace" # フォントフェース
 POINTS =  300   # フォントポイント
 
 ### モジュール初期化
